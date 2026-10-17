@@ -7,7 +7,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 if sys.stdout is None: sys.stdout = open(os.devnull, 'w')   # pythonw (sin consola)
 if sys.stderr is None: sys.stderr = open(os.devnull, 'w')
 
-VERSION = '3.7'
+VERSION = '3.8'
 EDICION = 'amigo'   # 'anfitrion' = el de Rayner (con servidor); 'amigo' = solo para entrar
 SERVIDOR_POR_DEFECTO = '81.57.59.179'
 TCP = {80: 12080, 4002: 12002, 4006: 12006, 4010: 12010, 4021: 12021}
@@ -410,8 +410,9 @@ def aplica_actualizacion():
         exe = sys.executable
         _w = os.path.join(os.path.dirname(exe), 'pythonw.exe')
         if os.path.isfile(_w): exe = _w   # sin ventana de consola
-        cmd = 'ping -n 4 127.0.0.1 >nul & start "" "%s" "%s"' % (exe, me)
-        subprocess.Popen(['cmd', '/c', cmd], creationflags=0x08000000, close_fds=True)
+        bat = os.path.join(CFG_DIR, 'relanza.bat')   # v3.8: antes se pasaba el comando suelto y Windows se confundia con las comillas
+        with open(bat, 'w', encoding='utf8') as f: f.write('@echo off\r\nping -n 4 127.0.0.1 >nul\r\nstart "" "%s" "%s"\r\n' % (exe, me))
+        subprocess.Popen(['cmd', '/c', bat], creationflags=0x08000000, close_fds=True)
         SALIR.set()
     except Exception as e:
         log('error al actualizar: %s' % e); E['err'] = 'No pude actualizar: %s' % e
