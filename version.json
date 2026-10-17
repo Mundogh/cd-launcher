@@ -1,0 +1,12 @@
+{
+ "version": "3.6",
+ "notas": "Actualizacion automatica desde GitHub",
+ "anfitrion": {
+  "archivo": "launcher_cd.py",
+  "sha256": "357dc2b3be86f9984647f73d5bac616f5f9800af4b5fd89a04e75388f486d67b"
+ },
+ "amigo": {
+  "archivo": "launcher_amigo.py",
+  "sha256": "0625292f9692ba2df3d21ed09eb487b8da03481a217f5dbb64800685412e90cb"
+ }
+}
