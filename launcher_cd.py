@@ -7,7 +7,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 if sys.stdout is None: sys.stdout = open(os.devnull, 'w')   # pythonw (sin consola)
 if sys.stderr is None: sys.stderr = open(os.devnull, 'w')
 
-VERSION = '3.6'
+VERSION = '3.7'
 EDICION = 'anfitrion'   # 'anfitrion' = el de Rayner (con servidor); 'amigo' = solo para entrar
 SERVIDOR_POR_DEFECTO = '81.57.59.179'
 TCP = {80: 12080, 4002: 12002, 4006: 12006, 4010: 12010, 4021: 12021}

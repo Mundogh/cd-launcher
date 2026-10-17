@@ -1,12 +1,12 @@
 {
- "version": "3.6",
- "notas": "Actualizacion automatica desde GitHub",
+ "version": "3.7",
+ "notas": "Prueba de actualizacion automatica",
  "anfitrion": {
   "archivo": "launcher_cd.py",
-  "sha256": "357dc2b3be86f9984647f73d5bac616f5f9800af4b5fd89a04e75388f486d67b"
+  "sha256": "ce7e0eef26f1191a75fd9b9a3ef1fe10080c7ae69bbc59b5a77f16b4112edaa4"
  },
  "amigo": {
   "archivo": "launcher_amigo.py",
-  "sha256": "0625292f9692ba2df3d21ed09eb487b8da03481a217f5dbb64800685412e90cb"
+  "sha256": "1b2d60abe3d56bd95fd9bca353dae340c3f9733908b3dfbe0f879543a1d3dc58"
  }
 }
